@@ -1,8 +1,9 @@
 #include <iostream>
+#include "Date.h"
 
 class Reservation{
     public:
-    int date_debut;
+    Date date_debut(int day, int month,int year);
     int nb_nuits;
     int id_hotel;
     int id_chambre; //HERTAGE
@@ -14,9 +15,12 @@ class Reservation{
     int id_chambre(); //HERTAGE
     int id_client();
     int prix_total();
+    void updateDateDebut(Date date);
+    void updateNbNuits(int nb_nuits);
+    int montant_total(int montant_total);
 
     private:
-    int _date_debut;
+    Date _date_debut;
     int _nb_nuits;
     int _id_hotel;
     int _id_chambre; //HERTAGE

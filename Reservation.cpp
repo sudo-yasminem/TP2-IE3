@@ -1,4 +1,5 @@
 #include "Reservation.h"
+#include "Date.h"
 #include <iostream>
 
 int Reservation::date_debut(){
@@ -23,4 +24,20 @@ int Reservation::id_client(){
 
 int Reservation::prix_total(){
     return _prix_total;
+}
+
+void Reservation::updateDateDebut(Date date){
+    date_debut.day() = date.day();
+    date_debut.month() = date.month();
+    date_debut.year() = date.year();
+
+}
+
+void Reservation::updateNbNuits(int nb_nuits){
+    _nb_nuits = nb_nuits;
+}
+
+int Reservation::montant_total(){
+    total = nb_nuits*prix_chambre // PRIX CHAMBRE
+    return total;
 }

@@ -1,6 +1,6 @@
 #include "Hotel.h"
-
 #include <iostream>
+#include <vector>
 
 Hotel::Hotel(std::string id, std::string nom, std::string ville, std::vector<Chambre> chambres, int nb_chambres){
     _id = id;
@@ -8,10 +8,6 @@ Hotel::Hotel(std::string id, std::string nom, std::string ville, std::vector<Cha
     _ville = ville;
     _chambres = chambres; 
 
-    for(int i=0; i<nb_chambres; i++){
-        chambres.push_back(chambres[i]);
-
-    }
 }
 
 
@@ -35,10 +31,10 @@ int Hotel::nb_chambres(){
     return _nb_chambres;
 }
 
-void Hotel::ajouteChambre(std::vector<Chambre> chambres,int nb_chambres){
-    for(int i=0; i < nb_chambres; i++){
-        chambres.push_back(chambres[i]);
+void Hotel::ajouteChambre(std::vector<Chambre> chambres, std::string type, int nb_chambres, int prix){
+   /* for(int i=0; i < nb_chambres; i++){
+        chambres.push_back(Chambre(i+1,type,prix));
 
-    }
-
+    }*/
 }
+
