@@ -2,16 +2,15 @@
 
 class Chambre{
     public:
-    int numero;
-    std::string type;
-    int prix;
-    int numero();
-    int prix();
+    Chambre(int numero_chambre, std::string type, int prix_chambre);
+    int numero_chambre();
+    int prix_chambre();
     std::string type();
+    void updatePrixChambre(int prix_chambre);
 
     private:
-    int _numero;
+    int _numero_chambre;
     std::string _type;
-    int _prix;
+    int _prix_chambre;
 
 };

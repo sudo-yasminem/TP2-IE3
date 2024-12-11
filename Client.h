@@ -8,6 +8,8 @@ class Client{
     std::string id();
     std::string nom();
     std::string prenom();
+    void updateNom(std::string nom);
+    void updatePrenom(std::string prenom);
     private:
     std::string _id;
     std::string _nom;
