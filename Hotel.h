@@ -11,9 +11,9 @@ class Hotel{
     std::string id();
     std::string nom();
     std::string ville();
-    std::vector<Chambre> chambres;
+    std::vector<Chambre> chambres();
     int nb_chambres();
-    void ajouteChambre(int numero_chambre);
+    void ajouteChambre(std::vector<Chambre> chambres,int nb_chambres);
     Hotel(std::string id, std::string nom, std::string ville, std::vector<Chambre> chambres, int nb_chambres);
 
     private:
