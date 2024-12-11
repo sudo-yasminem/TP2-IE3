@@ -1,7 +1,8 @@
 #include <iostream>
+#include <vector>
 #include "Chambre.h"
 
-class Hotel: public Chambre{
+class Hotel{
     public:
     /*std::string id;
     std::string nom;
@@ -10,14 +11,15 @@ class Hotel: public Chambre{
     std::string id();
     std::string nom();
     std::string ville();
-    Chambre tab();
-    void supprimeChambre(int numero_chambre); // HeritageChambre?
+    std::vector<Chambre> chambres;
+    int nb_chambres();
     void ajouteChambre(int numero_chambre);
+    Hotel(std::string id, std::string nom, std::string ville, std::vector<Chambre> chambres, int nb_chambres);
 
     private:
     std::string _id;
     std::string _nom;
     std::string _ville;
-    Chambre _tab[];
-    
+    std::vector<Chambre> _chambres;
+    int _nb_chambres;
 };
