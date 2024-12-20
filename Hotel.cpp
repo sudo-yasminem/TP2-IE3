@@ -7,6 +7,7 @@ Hotel::Hotel(std::string id, std::string nom, std::string ville, std::vector<Cha
     _nom = nom;
     _ville = ville;
     _chambres = chambres; 
+    _nb_chambres = nb_chambres;
 
 }
 
@@ -32,9 +33,10 @@ int Hotel::nb_chambres(){
 }
 
 void Hotel::ajouteChambre(std::vector<Chambre> chambres, std::string type, int nb_chambres, int prix){
-   /* for(int i=0; i < nb_chambres; i++){
+    for(int i=0; i < nb_chambres; i++){
         chambres.push_back(Chambre(i+1,type,prix));
+        nb_chambres++;
 
-    }*/
+    }
 }
 
