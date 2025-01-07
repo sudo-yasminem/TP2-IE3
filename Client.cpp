@@ -29,6 +29,7 @@ void Client::updatePrenom(std::string prenom){
     _prenom = prenom;
 }
 
-/*std::ostream& Client::operator<< (std::ostream& os, Client c){
+std::ostream& operator << (std::ostream& os, Client c){
     os << c._id << "  " << c._prenom << "  " << c._nom;
-}*/
+    return os;
+}

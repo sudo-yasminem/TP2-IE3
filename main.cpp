@@ -10,8 +10,30 @@ int main(){
    std::vector <Client> vclients;
    std::vector <Chambre> vhotel;
 
-   for(int i=0; i<=3; i++){
+   Client a(100, "Jean", "Caissetou");
+
+   for(int i=1; i<4; i++){
     Chambre c(i,"Single",100);
+    vhotel.push_back(c);
+    for (auto i: vhotel);{
+        std::cout << "Numéro de chamrbre: " << c.numero_chambre() << std::endl;
+        std::cout << "Type : " << c.type() << std::endl;
+        std::cout << "Prix : " << c.prix_chambre() << " EUR" << std::endl;
+    }
+   } 
+
+   for(int i=4; i<=8; i++){
+    Chambre c(i,"Double",125);
+    vhotel.push_back(c);
+    for (auto i: vhotel);{
+        std::cout << "Numéro de chamrbre: " << c.numero_chambre() << std::endl;
+        std::cout << "Type : " << c.type() << std::endl;
+        std::cout << "Prix : " << c.prix_chambre() << " EUR" << std::endl;
+    }
+   }  
+
+    for(int i=8; i<10; i++){
+    Chambre c(i,"Suite",210);
     vhotel.push_back(c);
     for (auto i: vhotel);{
         std::cout << "Numéro de chamrbre: " << c.numero_chambre() << std::endl;
@@ -20,14 +42,9 @@ int main(){
     }
    } 
 
+   std::cout<<a;
    
 
-    /*for(int i=0;i<H.nb_chambres();i++){
-        std::cout << chambres[i].type() << std::endl;
-
-    }*/
-   //std::cout<<client;
-
-    
+   
     return 0;
 }
