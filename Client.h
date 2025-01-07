@@ -2,6 +2,7 @@
 
 class Client{
     public:
+
     Client(int id, std::string nom, std::string prenom);
     int id();
     std::string nom();
