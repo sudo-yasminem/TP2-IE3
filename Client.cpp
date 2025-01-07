@@ -4,9 +4,9 @@
 
 
 Client::Client(int id, std::string nom, std::string prenom){
-    id= _id;
-    nom=_nom;
-    prenom=_prenom;
+    _id= id;
+    _nom= nom;
+    _prenom= prenom;
 }
 
 int Client::id(){

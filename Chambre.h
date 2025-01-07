@@ -1,6 +1,6 @@
 #include <iostream>
 
-class Chambre{
+class Chambre {
     public:
     Chambre(int numero_chambre, std::string type, int prix_chambre);
     int numero_chambre();
