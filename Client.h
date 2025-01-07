@@ -2,9 +2,6 @@
 
 class Client{
     public:
-    std::string id;
-    std::string nom;
-    std::string prenom;
     std::string id();
     std::string nom();
     std::string prenom();
