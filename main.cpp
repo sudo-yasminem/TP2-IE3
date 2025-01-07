@@ -14,7 +14,16 @@ int main(){
    std::vector <Chambre> vhotel;
 
    Client a(100, "Jean", "Caissetou");
-   Chambre b(12, "Single",100);
+   Client b(320, "Joris", "Lemaire");
+
+    vclients.push_back(a);
+    vclients.push_back(b);
+
+//Surcharge d'opérateur pour afficher les objets Client dans le vecteur
+    for (auto i: vclients){
+        std::cout<<i;
+    }
+    
 
    for(int i=1; i<4; i++){
     Chambre c(i,"Single",100);
