@@ -1,7 +1,15 @@
 #include "Client.h"
+
 #include <iostream>
 
-std::string Client::id(){
+
+Client::Client(int id, std::string nom, std::string prenom){
+    id= _id;
+    nom=_nom;
+    prenom=_prenom;
+}
+
+int Client::id(){
     return _id;
 }
 
@@ -20,3 +28,7 @@ void Client::updateNom(std::string nom){
 void Client::updatePrenom(std::string prenom){
     _prenom = prenom;
 }
+
+/*std::ostream& Client::operator<< (std::ostream& os, Client c){
+    os << c._id << "  " << c._prenom << "  " << c._nom;
+}*/
