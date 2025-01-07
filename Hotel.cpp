@@ -2,13 +2,9 @@
 #include <iostream>
 #include <vector>
 
-Hotel::Hotel(std::string id, std::string nom, std::string ville, std::vector<Chambre> chambres, int nb_chambres){
-    _id = id;
-    _nom = nom;
-    _ville = ville;
-    _chambres = chambres; 
-    _nb_chambres = nb_chambres;
-
+Hotel::Hotel(std::string id, std::string nom, std::string ville, std::vector<Chambre> chambres, int nb_chambres)
+:_id(id), _nom(nom),_ville(ville),_nb_chambres(nb_chambres),_chambres(chambres){
+    
 }
 
 
@@ -31,10 +27,10 @@ std::vector<Chambre> Hotel::chambres(){
 int Hotel::nb_chambres(){
     return _nb_chambres;
 }
-
-void Hotel::ajouteChambre(std::vector<Chambre> chambres, std::string type, int nb_chambres, int prix){
+//Passage par référence
+void Hotel::ajouteChambre(std::string type, int nb_chambres, int prix){
     for(int i=0; i < nb_chambres; i++){
-        chambres.push_back(Chambre(i+1,type,prix));
+        _chambres.push_back(Chambre(i+1,type,prix));
         nb_chambres++;
 
     }

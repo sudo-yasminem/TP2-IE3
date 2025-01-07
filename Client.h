@@ -2,16 +2,16 @@
 
 class Client{
     public:
-    std::string id();
+
+    Client(int id, std::string nom, std::string prenom);
+    int id();
     std::string nom();
     std::string prenom();
     void updateNom(std::string nom);
     void updatePrenom(std::string prenom);
-    friend std::ostream& operator<< (ostream& os, Client &c){
-        os << c.id << "  " << c.prenom << "  " << c.nom;
-    }
+    friend std::ostream& operator << (std::ostream& os, Client c);
     private:
-    std::string _id;
+    int _id;
     std::string _nom;
     std::string _prenom;
     
