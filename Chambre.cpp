@@ -22,3 +22,8 @@ std::string Chambre::type(){
 void Chambre::updatePrixChambre(int prix_chambre){
     _prix_chambre = prix_chambre;
 }
+
+std::ostream& operator << (std::ostream& os, Chambre c){
+    os << c._numero_chambre << "  " << c._type << "  " << c._prix_chambre;
+    return os;
+}
