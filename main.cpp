@@ -13,11 +13,16 @@ int main(){
    std::vector <Client> vclients;
    std::vector <Chambre> vhotel;
 
-   Client a(100, "Jean", "Caissetou");
-   Client b(320, "Joris", "Lemaire");
-
+    int x=0;
+    std::string y;
+    std::string z;
+   Client a(x,y,z);
+   std::cout << "Entrez votre nom" << std::endl;
+   std::cin << y;
+   std::cout << "Entrez votre prenom" << std::endl;
+   std::cin << z;
+  
     vclients.push_back(a);
-    vclients.push_back(b);
 
 //Surcharge d'opérateur pour afficher les objets Client dans le vecteur
     for (auto i: vclients){
@@ -28,7 +33,7 @@ int main(){
    for(int i=1; i<4; i++){
     Chambre c(i,"Single",100);
     vhotel.push_back(c);
-    std::cout<<c; 
+    //std::cout<<c; 
     }
 
 
@@ -36,21 +41,13 @@ int main(){
    for(int i=4; i<=8; i++){
     Chambre c(i,"Double",125);
     vhotel.push_back(c);
-    for (auto i: vhotel);{
-        std::cout << "Numéro de chamrbre: " << c.numero_chambre() << std::endl;
-        std::cout << "Type : " << c.type() << std::endl;
-        std::cout << "Prix : " << c.prix_chambre() << " EUR" << std::endl;
-    }
+    //std::cout<<c;
    }  
 
     for(int i=8; i<10; i++){
     Chambre c(i,"Suite",210);
     vhotel.push_back(c);
-    for (auto i: vhotel);{
-        std::cout << "Numéro de chamrbre: " << c.numero_chambre() << std::endl;
-        std::cout << "Type : " << c.type() << std::endl;
-        std::cout << "Prix : " << c.prix_chambre() << std::endl;
-    }
+    //std::cout<<c;
    } 
 
 
