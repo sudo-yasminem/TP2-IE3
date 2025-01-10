@@ -1,8 +1,11 @@
 #include <iostream>
 #include "Date.h"
+#include "Hotel.h"
 
 class Reservation{
     public:
+    Reservation();
+    Reservation(Date date_debut,int nb_nuits,int id_hotel);
     Date date_debut(int day, int month,int year);
     Date date_debut();
     int nb_nuits();
@@ -12,6 +15,7 @@ class Reservation{
     int prix_total();
     void updateDateDebut(Date date);
     void updateNbNuits(int nb_nuits);
+    void setIdHotel(int id2, Hotel hotel);
     int montant_total(Reservation a);
 
     private:

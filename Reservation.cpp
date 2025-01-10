@@ -1,6 +1,15 @@
 #include "Reservation.h"
 #include "Date.h"
 #include <iostream>
+#include <vector>
+#include "Hotel.h"
+
+
+Reservation::reservation(Date date_debut, int nb_nuits, int id_hotel){
+    _nb_nuits = nb_nuits;
+    _id_hotel = id_hotel;
+   _date_debut = date_debut
+}
 
 Date Reservation::date_debut(){
     return _date_debut;
@@ -35,12 +44,12 @@ void Reservation::updateNbNuits(int nb_nuits){
 }
 
 int getPrixChambre(Reservation a, std::vector <Chambre> chambres){
-    int val;
+    /*int val;
     Chambre Chambre;
-    a._id_chambre = val;
-    if (a.id_chambre == val){
+    a.id_chambre() = val;
+    if (a.id_chambre() == val){
         if(Chambre.type()=="Single"){
-            return 100
+            return 100;
         else if(Chambre.type()=="Double"){
             return 125;
         }
@@ -48,13 +57,18 @@ int getPrixChambre(Reservation a, std::vector <Chambre> chambres){
             return 200;
         }
         }
-    }
+    }*/
  }
 
+void setIdHotel(int id2, Hotel hotel){
+    tmp = hotel.id();
+    tmp = id2;
+    Hotel::SetId(id2);
+}
 
 
 int Reservation::montant_total(Reservation a){
     //Get PrixChambre
-    int total = a._nb_nuits*a.getPrixChambre(); // PRIX CHAMBRE
-    return total;
+    //int total = a._nb_nuits*a.getPrixChambre(); 
+    return 0;
 }

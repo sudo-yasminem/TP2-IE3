@@ -1,6 +1,12 @@
-#include "Chambre.h"
-#include <iostream>
 
+#include <iostream>
+#include "Chambre.h"
+
+Chambre::Chambre(){
+    _numero_chambre=0;
+    _type="rien";
+    _prix_chambre=0;
+}
 Chambre::Chambre(int numero_chambre, std::string type, int prix_chambre){
     _numero_chambre = numero_chambre;
     _type = type;   

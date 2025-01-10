@@ -1,7 +1,9 @@
 #include <iostream>
+#pragma once
 
 class Chambre {
     public:
+    Chambre();
     Chambre(int numero_chambre, std::string type, int prix_chambre);
     int numero_chambre();
     int prix_chambre();
@@ -15,3 +17,6 @@ class Chambre {
     int _prix_chambre;
 
 };
+
+
+
