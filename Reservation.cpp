@@ -2,7 +2,7 @@
 #include "Date.h"
 #include <iostream>
 
-int Reservation::date_debut(){
+Date Reservation::date_debut(){
     return _date_debut;
 }
 
@@ -19,7 +19,7 @@ int Reservation::id_chambre(){
 }
 
 int Reservation::id_client(){
-    return id_client;
+    return _id_client;
 }
 
 int Reservation::prix_total(){
@@ -27,9 +27,6 @@ int Reservation::prix_total(){
 }
 
 void Reservation::updateDateDebut(Date date){
-    date_debut.day() = date.day();
-    date_debut.month() = date.month();
-    date_debut.year() = date.year();
 
 }
 
@@ -37,7 +34,27 @@ void Reservation::updateNbNuits(int nb_nuits){
     _nb_nuits = nb_nuits;
 }
 
-int Reservation::montant_total(){
-    total = nb_nuits*prix_chambre // PRIX CHAMBRE
+int getPrixChambre(Reservation a, std::vector <Chambre> chambres){
+    int val;
+    Chambre Chambre;
+    a._id_chambre = val;
+    if (a.id_chambre == val){
+        if(Chambre.type()=="Single"){
+            return 100
+        else if(Chambre.type()=="Double"){
+            return 125;
+        }
+        else if(Chambre.type()=="Suite"){
+            return 200;
+        }
+        }
+    }
+ }
+
+
+
+int Reservation::montant_total(Reservation a){
+    //Get PrixChambre
+    int total = a._nb_nuits*a.getPrixChambre(); // PRIX CHAMBRE
     return total;
 }

@@ -3,6 +3,7 @@
 #include <vector>
 #include "Client.h"
 #include "Hotel.h"
+#include "Reservation.h"
 
 
 
@@ -15,7 +16,25 @@ int main(){
 
    Client a;
 
-   std::cout << a.createClient(a);
+   /* std::cout << "Entrez votre prénom" << std::endl;
+    //Marche pas à cause de >> 
+    std::cin >> a.prenom();
+    std::cout << "Entrez votre nom" << std::endl;
+    std::cin >> a.nom();
+    */
+
+    for (auto i: vclients){
+        //recherche du client a dans vclients
+            //if (std::find(vclients.begin(),vclients.end(),a) != vclients.end())
+            vclients.push_back(a);
+            std::cout << "Bienvenue chez nous, M/Mme" << a.prenom() << "  " << a.nom() << std::endl;
+            
+            /*else{
+                return "Rebonjour, M/Mme" + a._prenom + " " + a._nom;
+            }*/
+        
+    }
+   
 
    
 

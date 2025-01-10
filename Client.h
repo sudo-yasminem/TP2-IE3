@@ -11,7 +11,6 @@ class Client{
     void updateNom(std::string nom);
     void updatePrenom(std::string prenom);
     friend std::ostream& operator << (std::ostream& os, Client c);
-    std::string createClient(Client a);
     private:
     int _id;
     std::string _nom;

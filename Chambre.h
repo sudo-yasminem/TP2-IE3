@@ -8,7 +8,7 @@ class Chambre {
     std::string type();
     void updatePrixChambre(int prix_chambre);
     friend std::ostream& operator << (std::ostream& os, Chambre c);
-
+    
     private:
     int _numero_chambre;
     std::string _type;
