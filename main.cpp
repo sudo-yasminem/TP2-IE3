@@ -6,24 +6,21 @@
 #include "Reservation.h"
 
 
-
-
-
 int main(){
     
    
     std::vector <Client> vclients;
-    std::vector <Chambre> vchambres;
 
     Reservation res;
-    Hotel(113,"Hotel du Pont", "Roubaix",vchambres,10);
+    Hotel(113,"Hotel du Pont", "Roubaix",10);
 
     int nuits;
     nuits = res.nb_nuits();
     Date date;
     date = res.date_debut();
-    
-    
+
+
+   
     std::cout << "Entrez le nb de nuits" <<std::endl;
     std::cin >> nuits;
     std::cout << "Entrez la Date du début" <<std::endl;
@@ -62,7 +59,7 @@ int main(){
     }*/
     
 
-    for(int i=1; i<4; i++){
+    /*for(int i=1; i<4; i++){
         Chambre c(i,"Single",100);
         vchambres.push_back(c);
      //std::cout<<c; 
@@ -80,7 +77,7 @@ int main(){
         Chambre c(i,"Suite",210);
         vchambres.push_back(c);
         //std::cout<<c;
-    } 
+    } */ 
 
 
    

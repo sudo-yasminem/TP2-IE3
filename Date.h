@@ -1,13 +1,14 @@
+#pragma once
 #include <iostream>
-#ifndef DATE_H
-#define DATE_H
+
 
 class Date{
     public:
+    Date();
+    Date(int day,int month, int year);
     int day();
     int month();
     int year();
-    Date(int day=1,int month=1,int year=2024);
     void updateDay(int day);
     void updateMonth(int month);
     void updateYear(int year);
@@ -18,4 +19,3 @@ class Date{
     int _year;
 };
 
-#endif 

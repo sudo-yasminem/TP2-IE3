@@ -4,11 +4,15 @@
 #include <vector>
 #include "Hotel.h"
 
+Reservation::Reservation(){
+    _nb_nuits =0;
+    _id_hotel=0;
+}
 
-Reservation::reservation(Date date_debut, int nb_nuits, int id_hotel){
+Reservation::Reservation(Date& date_debut, int nb_nuits, int id_hotel){
     _nb_nuits = nb_nuits;
     _id_hotel = id_hotel;
-   _date_debut = date_debut
+   _date_debut = date_debut;
 }
 
 Date Reservation::date_debut(){
@@ -58,12 +62,13 @@ int getPrixChambre(Reservation a, std::vector <Chambre> chambres){
         }
         }
     }*/
+   return 0;
  }
 
-void setIdHotel(int id2, Hotel hotel){
-    tmp = hotel.id();
+void setIdHotel(int id2, Hotel& hotel){
+    int tmp = hotel.id();
     tmp = id2;
-    Hotel::SetId(id2);
+    hotel.SetId(id2);
 }
 
 

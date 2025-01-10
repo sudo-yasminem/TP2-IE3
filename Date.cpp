@@ -1,6 +1,12 @@
 #include "Date.h"
 #include <iostream>
 
+Date::Date(){
+    _month = 1;
+    _day = 1;
+    _year = 2000;
+}
+
 Date::Date(int month,int day,int year){
     _month = month;
     _day = day;

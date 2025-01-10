@@ -1,12 +1,12 @@
+
 #include "Hotel.h"
 #include <iostream>
 #include <vector>
 
-Hotel::Hotel(int id, std::string nom, std::string ville, std::vector<Chambre> chambres, int nb_chambres){
+Hotel::Hotel(int id, std::string nom, std::string ville, int nb_chambres){
     _id = id;
     _nom = nom;
     _ville = ville;
-    _chambres = chambres;
     _nb_chambres = nb_chambres;
 }
 
@@ -49,5 +49,31 @@ void Hotel::ajouteChambre(std::string type, int nb_chambres, int prix){
     }
 }
 
+std::vector<Chambre> Hotel::initHotel(Hotel a){
+    std::vector<Chambre> tmp;
+    tmp=a.chambres();
+    for(int i=1; i<4; i++){
+        Chambre c(i,"Single",100);
+        tmp.push_back(c);
+        //std::cout<<c; 
+    }
+
+
+
+    for(int i=4; i<=8; i++){
+        Chambre c(i,"Double",125);
+        tmp.push_back(c);
+        //std::cout<<c;
+    }  
+
+    for(int i=8; i<10; i++){
+        Chambre c(i,"Suite",210);
+        tmp.push_back(c);
+        //std::cout<<c;
+    } 
+
+    return tmp;
+
+}
 
 
