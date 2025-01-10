@@ -19,11 +19,24 @@ int main(){
     Date date;
     date = res.date_debut();
 
+    int d = date.day();
+    int m = date.month();
+    int y = date.year();
 
-   
     std::cout << "Entrez le nb de nuits" <<std::endl;
     std::cin >> nuits;
     std::cout << "Entrez la Date du début" <<std::endl;
+    std::cout << "Jour : " <<std::endl;
+    std::cin >> d;
+    std::cout << "Mois : " <<std::endl;
+    std::cin >> m;
+    std::cout << "Année : " <<std::endl;
+    std::cin >> y;
+    std::cout << "Séjour reservé pour le " << d << "/" << m << "/" << "/" << y << std::endl;
+   
+     
+
+
     //std::cin >> date; //Définir l'opérateur pour cin une date
    
     
